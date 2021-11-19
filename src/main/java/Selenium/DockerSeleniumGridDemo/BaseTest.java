@@ -22,7 +22,7 @@ import java.net.URL;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	 protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+	 protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
 	 //for execution on selenium 4 grid on docker 
 	 String node="http://localhost:4444";
 
