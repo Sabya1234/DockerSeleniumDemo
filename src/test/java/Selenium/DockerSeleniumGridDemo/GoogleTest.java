@@ -26,8 +26,8 @@ public class GoogleTest extends BaseTest {
 		getDriver().findElement(By.name("q")).sendKeys(Keys.ENTER);
 		String actualName = getDriver().findElement(By.xpath("//h3[contains(text(),'Welcome to')]")).getText();
 		System.out.println(actualName);
-		// Assert.assertTrue(actualName.contains("Welcome to Naveen"));
-		Assert.assertTrue(actualName.contains("Welcome to Sabya"));
+		 Assert.assertTrue(actualName.contains("Welcome to Naveen"));
+		//Assert.assertTrue(actualName.contains("Welcome to Sabya"));
 		
 	}
 
