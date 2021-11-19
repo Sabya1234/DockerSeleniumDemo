@@ -6,7 +6,6 @@
 
 </listeners>
    <test thread-count="3" name="ExtentTestDemoChrome" parallel="methods">
-   <parameter name="browser" value="chrome"/>
     <classes>
       <class name="Selenium.DockerSeleniumGridDemo.OrangeHRMTest"/>
       <class name="Selenium.DockerSeleniumGridDemo.FaceBookLogoTest"/>

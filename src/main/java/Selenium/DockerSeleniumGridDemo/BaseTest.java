@@ -27,14 +27,16 @@ public class BaseTest {
 	 String node="http://localhost:4444";
 
 	    @BeforeMethod
-	    @Parameters(value = {"browser"})
-	    public void setupTest(String browser) throws MalformedURLException {
+	   // @Parameters(value = {"browser"})
+	    public void setupTest() throws MalformedURLException {
+	    	String browser=System.getProperty("nodeSelection");
+	    	System.out.println("Selected node :"+browser);
 	        DesiredCapabilities capabilities = new DesiredCapabilities();
 	        capabilities.setCapability("browserName", browser);
 	        //capabilities.setCapability("enableVNC", true);
 	        driver.set(new RemoteWebDriver(new URL(node), capabilities));
 	        
-	        //F0r execution on grid 3 use below syntax to conencto hub url for execution of scripts
+	        //For execution on grid 3 use below syntax to conencto hub url for execution of scripts
 	        //driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities));
 	    }
 
